@@ -1,8 +1,8 @@
 @import 'global';
 @import 'animations';
 :root {
-  --primary-color: #C9A96A;
-  --secondary-color: #AE926B;
+  --primary-color: #6A4291;
+  --secondary-color: #4b3561;
   --dark-color: #000;
   --light-color: #fff;
   --gray-color: #808080;
@@ -307,7 +307,7 @@ header {
   .box {
     width: 100%;
     padding: 20px 10px;
-    background-color: rgba($color: #AE926B, $alpha: 0.4);
+    background-color: rgba($color: #6A4291, $alpha: 0.4);
     border-radius: 10px;
     display: flex;
     align-items: center;

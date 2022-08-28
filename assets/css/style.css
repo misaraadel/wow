@@ -20,11 +20,11 @@
   scroll-behavior: smooth;
 }
 *::-moz-selection {
-  background-color: #C9A96A;
+  background-color: #6A4291;
   color: #fff;
 }
 *::selection {
-  background-color: #C9A96A;
+  background-color: #6A4291;
   color: #fff;
 }
 *::-webkit-scrollbar {
@@ -68,14 +68,14 @@ ul {
   width: 20px;
   height: 4px;
   border-radius: 4px;
-  background-color: #C9A96A;
+  background-color: #6A4291;
   opacity: 0.5;
   transition: all 0.5s linear;
 }
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #C9A96A;
+  background-color: #6A4291;
   opacity: 1;
 }
 
@@ -980,8 +980,8 @@ ul {
   }
 }
 :root {
-  --primary-color: #C9A96A;
-  --secondary-color: #AE926B;
+  --primary-color: #6A4291;
+  --secondary-color: #4b3561;
   --dark-color: #000;
   --light-color: #fff;
   --gray-color: #808080;
@@ -1254,7 +1254,7 @@ header .form-btn .custom-btn {
 .serivces .box {
   width: 100%;
   padding: 20px 10px;
-  background-color: rgba(174, 146, 107, 0.4);
+  background-color: rgba(106, 66, 145, 0.4);
   border-radius: 10px;
   display: flex;
   align-items: center;

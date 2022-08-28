@@ -23,7 +23,7 @@
     scroll-behavior: smooth;
 
     &::selection{
-        background-color: #C9A96A;
+        background-color: #6A4291;
         color: #fff; 
     }
     
@@ -72,14 +72,14 @@ ul{
     width: 20px;
     height: 4px;
     border-radius: 4px;
-    background-color: #C9A96A;
+    background-color: #6A4291;
     opacity: .5;
     transition: all .5s linear;
 }
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span{
-    background-color: #C9A96A;
+    background-color: #6A4291;
     opacity: 1;
 }
 
