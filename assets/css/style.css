@@ -986,7 +986,7 @@ ul {
   --light-color: #fff;
   --gray-color: #808080;
   --light-filter: invert(100%) sepia(0%) saturate(7468%) hue-rotate(154deg) brightness(96%) contrast(103%);
-  --primary-filter: invert(68%) sepia(58%) saturate(291%) hue-rotate(2deg) brightness(91%) contrast(88%);
+  --primary-filter: invert(29%) sepia(58%) saturate(630%) hue-rotate(228deg) brightness(90%) contrast(91%);
 }
 
 .custom-btn {
@@ -1251,6 +1251,18 @@ header .form-btn .custom-btn {
   margin-top: 20px;
 }
 
+.sub-header {
+  width: 100%;
+  background: url("../images/header.jpg") center/cover no-repeat;
+  padding: 150px 0px;
+}
+.sub-header h1 {
+  color: var(--light-color) !important;
+}
+.sub-header p {
+  color: var(--light-color) !important;
+}
+
 .serivces .box {
   width: 100%;
   padding: 20px 10px;
@@ -1295,6 +1307,49 @@ header .form-btn .custom-btn {
      object-fit: cover;
   border-radius: 10px;
 }
+.about-us .contain img.location {
+  height: 250px;
+}
+.about-us .contain .data {
+  width: 100%;
+  padding: 20px 0px;
+}
+.about-us .contain .data h2 {
+  color: var(--dark-color);
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.about-us .contain .data .list li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.about-us .contain .data .list li a {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.about-us .contain .data .list li a img {
+  width: 24px;
+  height: 24px;
+  filter: var(--primary-filter);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+}
+.about-us .contain .data .list li a span {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.about-us .heading {
+  text-align: start !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .product .product-box {
   width: 100%;
@@ -1303,6 +1358,41 @@ header .form-btn .custom-btn {
   overflow: hidden;
   z-index: 9;
   position: relative;
+}
+.product .product-box.inside-product {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s linear;
+}
+.product .product-box.inside-product::after {
+  display: none;
+}
+.product .product-box.inside-product .image-content {
+  width: 100%;
+  height: 300px !important;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.product .product-box.inside-product .image-content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.product .product-box.inside-product:hover {
+  transform: translateY(-10px);
+}
+.product .product-box.inside-product:hover .data img {
+  transform: none;
 }
 .product .product-box::after {
   content: "";
@@ -1350,8 +1440,90 @@ header .form-btn .custom-btn {
   -webkit-margin-end: 10px;
           margin-inline-end: 10px;
 }
+.product .product-box .data {
+  width: 100%;
+  padding: 20px 10px;
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+}
+.product .product-box .data a {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.product .product-box .data a img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+  filter: var(--primary-filter);
+}
+.product .product-box .data a span {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+}
 .product .product-box:hover img {
   transform: scale(1.3);
+}
+.product .form-content {
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  background-color: var(--light-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+.product .form-content .form-group label {
+  color: var(--dark-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.product .form-content .form-group .form-control {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--light-color);
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  color: var(--dark-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.product .form-content .form-group .form-control::-moz-placeholder {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.product .form-content .form-group .form-control:-ms-input-placeholder {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.product .form-content .form-group .form-control::placeholder {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.product .custom-btn {
+  width: 100%;
+}
+.product .form-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.product .form-btn .custom-btn {
+  margin-top: 20px;
 }
 
 .testimonial {
@@ -1460,6 +1632,158 @@ header .form-btn .custom-btn {
   font-size: 15px;
   font-weight: 500;
   margin: 0px;
+}
+
+.team {
+  padding-top: 0px !important;
+}
+.team .box {
+  width: 100%;
+  transition: all 0.3s linear;
+  background-color: var(--light-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.team .box .image-content {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.team .box .image-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.team .box .contain {
+  width: 100%;
+  padding: 20px 10px;
+}
+.team .box .contain h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+.team .box .contain p {
+  color: var(--gray-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+}
+.team .box:hover {
+  transform: translateY(-10px);
+}
+.team .box:hover h2 {
+  color: var(--primary-color);
+}
+
+.contact-us .box {
+  width: 100%;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  transition: all 0.3s linear;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+.contact-us .box img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: var(--primary-filter);
+  margin-bottom: 20px;
+}
+.contact-us .box h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+.contact-us .box p {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px;
+}
+.contact-us .box:hover {
+  transform: translateY(-10px);
+}
+.contact-us .box:hover img {
+  -webkit-animation: tada 0.3s linear both;
+          animation: tada 0.3s linear both;
+}
+.contact-us .map-contain {
+  width: 100%;
+  height: 400px;
+}
+.contact-us .map-contain iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact-us .form-content {
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background-color: var(--light-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+.contact-us .form-content .form-group label {
+  color: var(--dark-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contact-us .form-content .form-group .form-control {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--light-color);
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  color: var(--dark-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.contact-us .form-content .form-group .form-control::-moz-placeholder {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.contact-us .form-content .form-group .form-control:-ms-input-placeholder {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.contact-us .form-content .form-group .form-control::placeholder {
+  color: var(--gray-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.contact-us .form-content .form-group textarea {
+  height: 100px !important;
+  resize: none;
+}
+.contact-us .custom-btn {
+  width: 100%;
+}
+.contact-us .form-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.contact-us .form-btn .custom-btn {
+  margin-top: 20px;
 }
 
 footer {
